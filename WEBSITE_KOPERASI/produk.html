@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Meta Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="HandheldFriendly" content="true" />
+
+  <!-- SEO Meta -->
+  <title>Produk Unggulan - Koperasi Desa Merah Putih Wumbuburo</title>
+  <meta name="description" content="Produk unggulan Koperasi Merah Putih Wumbuburo meliputi Kopra Putih dan Gula Kelapa sesuai izin usaha dalam NIB." />
+  <meta name="keywords" content="produk koperasi, kopra putih, gula kelapa, koperasi wumbuburo" />
+  <meta name="author" content="Koperasi Desa Merah Putih Wumbuburo" />
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Produk Unggulan - Koperasi Desa Merah Putih Wumbuburo" />
+  <meta property="og:description" content="Temukan produk-produk unggulan Koperasi Desa Merah Putih Wumbuburo yang berkualitas dan menguntungkan." />
+  <meta property="og:image" content="assets/images/logo/logokopdes.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Base Styles */
+    .products-section {
+      margin: 40px 0;
+    }
+    .product-category {
+      margin-bottom: 40px;
+    }
+    .category-title {
+      background-color: #c00;
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 20px;
+      flex-grow: 1;
+    }
+    .product-name {
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .product-description {
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .product-specs {
+      margin-bottom: 15px;
+    }
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .spec-name {
+      color: #777;
+    }
+    .spec-value {
+      color: #333;
+      font-weight: 500;
+    }
+    .product-features {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+    .feature-list {
+      padding-left: 20px;
+    }
+    .feature-list li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+    .product-contact {
+      background: #f8f9fa;
+      padding: 15px;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+    .benefits-section {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .benefit-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .benefit-icon {
+      font-size: 30px;
+      color: #c00;
+      margin-bottom: 15px;
+    }
+    .info-notice {
+      background: #fff4e6;
+      border-left: 4px solid #ffa94d;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 4px;
+    }
+    .product-process {
+      margin: 20px 0;
+      padding: 15px;
+      background: #e8f4f8;
+      border-radius: 5px;
+    }
+    .process-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+    .highlight-box {
+      background: #f0f7ff;
+      border: 1px solid #cce5ff;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .product-card {
+        margin-bottom: 15px;
+      }
+      
+      .product-info {
+        padding: 15px;
+      }
+      
+      .product-contact {
+        padding: 12px;
+      }
+      
+      .product-contact p {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .spec-item {
+        flex-direction: column;
+      }
+      
+      .spec-value {
+        margin-top: 3px;
+      }
+      
+      .product-features {
+        padding: 12px;
+      }
+      
+      .info-notice, .highlight-box {
+        padding: 15px;
+        margin: 20px 0;
+      }
+      
+      .product-process {
+        padding: 12px;
+      }
+      
+      /* Contact buttons for mobile */
+      .contact-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+        justify-content: center;
+      }
+      
+      .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: #c00;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+      
+      .contact-btn:hover {
+        background-color: #a00;
+      }
+      
+      .contact-btn i {
+        margin-right: 5px;
+      }
+      
+      .whatsapp-btn {
+        background-color: #25D366;
+      }
+      
+      .whatsapp-btn:hover {
+        background-color: #128C7E;
+      }
+      
+      .phone-btn {
+        background-color: #007bff;
+      }
+      
+      .phone-btn:hover {
+        background-color: #0056b3;
+      }
+    }
+    
+    /* Additional improvements for desktop */
+    @media (min-width: 769px) {
+      .contact-buttons {
+        display: none; /* Only show on mobile */
+      }
+    }
+    
+    /* Enhanced contact section for both desktop and mobile */
+    .enhanced-contact {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .enhanced-contact h3 {
+      margin-top: 0;
+      color: #c00;
+    }
+    
+    .contact-methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    
+    .contact-method {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 150px;
+    }
+    
+    .contact-icon {
+      font-size: 24px;
+      color: #c00;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo dan Menu Toggle Wrapper -->
+      <div class="logo-toggle-wrapper">
+        <!-- Logo -->
+        <div class="logo" role="banner">
+          <img src="assets/images/logo/logokopdes.png" alt="Logo Koperasi Merah Putih Wumbuburo" class="logo-img" />
+          <div class="logo-text" aria-label="Nama Koperasi">KOPDES <span>MERAH PUTIH</span></div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mainNav">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="mainNav" role="navigation" aria-label="Menu Utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="pengurus.html">Pengurus</a></li>
+          <li><a href="produk.html" class="active" aria-current="page">Produk</a></li>
+          <li><a href="keanggotaan.html">Keanggotaan</a></li>
+          <li><a href="berita.html">Berita</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="section">
+      <h1 class="section-title">Produk Unggulan Koperasi</h1>
+      <p class="section-subtitle">Menghadirkan Produk Berkualitas untuk Kesejahteraan Anggota dan Masyarakat</p>
+
+      <!-- Kalimat Pembuka -->
+      <p style="margin-top: 15px; font-size: 16px; line-height: 1.8; text-align: justify; color: #333;">
+        Koperasi Desa Merah Putih Wumbuburo saat ini fokus mengembangkan dua produk unggulan sesuai dengan izin usaha dalam Nomor Induk Berusaha (NIB) kami, yaitu 
+        <strong>produksi kopra putih</strong> dan <strong>penjualan gula kelapa</strong>. Kedua produk ini dikelola secara <strong>profesional dan berkelanjutan</strong> 
+        dengan mengutamakan kualitas terbaik.
+      </p>
+
+      <p style="margin-top: 15px; font-size: 16px; line-height: 1.8; text-align: justify; color: #333;">
+        Dengan mengutamakan <strong>kualitas, keamanan, dan keberlanjutan</strong>, setiap produk yang kami hasilkan melalui proses yang teliti 
+        dan standar yang ketat. Kami berkomitmen untuk terus mengembangkan produk-produk yang tidak hanya memenuhi kebutuhan pasar 
+        tetapi juga memberikan <strong>nilai tambah</strong> bagi seluruh anggota dan masyarakat.
+      </p>
+
+      <!-- Informasi NIB -->
+      <div class="info-notice">
+        <h3 style="color: #d35400; margin-top: 0;">Informasi Legal Usaha</h3>
+        <p>Berdasarkan Nomor Induk Berusaha (NIB) kami, saat ini Koperasi Desa Merah Putih Wumbuburo secara resmi mengoperasikan dua bidang usaha:</p>
+        <ol>
+          <li>Produksi Kopra Putih</li>
+          <li>Penjualan Gula Kelapa</li>
+        </ol>
+        <p>Kami akan terus mengembangkan usaha lainnya sesuai dengan perkembangan koperasi dan persetujuan anggota.</p>
+      </div>
+    </section>
+
+    <!-- Produk Unggulan -->
+    <div class="products-section">
+      <!-- Kopra Putih -->
+      <div class="product-category">
+        <div class="category-title">
+          <h2>Kopra Putih</h2>
+        </div>
+        
+        <div class="highlight-box">
+          <h3 style="margin-top: 0; color: #0066cc;">Apa itu Kopra Putih?</h3>
+          <p>Kopra putih adalah daging kelapa yang dikeringkan dengan metode khusus sehingga menghasilkan warna yang lebih bersih, kadar air rendah, dan kualitas yang lebih tinggi dibandingkan kopra biasa. Proses pengeringan kami menggunakan teknik tradisional yang telah dimodernisasi untuk memastikan kualitas terbaik.</p>
+        </div>
+        
+        <div class="product-process">
+          <div class="process-title">Proses Produksi Kopra Putih Kami:</div>
+          <ol>
+            <li>Seleksi kelapa tua berkualitas tinggi dari kebun anggota koperasi</li>
+            <li>Pengupasan dan pembersihan dengan standar kebersihan ketat</li>
+            <li>Pengeringan dengan metode khusus untuk mempertahankan nutrisi</li>
+            <li>Pengemasan higienis dengan pengawasan mutu</li>
+          </ol>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/produk/kopra.jpg" alt="Kopra Putih Premium" class="product-image">
+            <div class="product-info">
+              <h3 class="product-name">Kopra Putih Premium</h3>
+              <p class="product-description">Kopra putih dengan kualitas terbaik, diproses secara tradisional dengan standar kebersihan tinggi. Cocok untuk industri makanan, kosmetik, dan farmasi.</p>
+              
+              <div class="product-specs">
+                <div class="spec-item">
+                  <span class="spec-name">Kadar Air:</span>
+                  <span class="spec-value">Max 5%</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-name">Kemurnian:</span>
+                  <span class="spec-value">100% Kelapa Asli</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-name">Pengemasan:</span>
+                  <span class="spec-value">Karung 50 kg</span>
+                </div>
+              </div>
+              
+              <div class="product-features">
+                <h4>Keunggulan Produk:</h4>
+                <ul class="feature-list">
+                  <li>Warna putih bersih dan konsisten</li>
+                  <li>Kadar minyak tinggi (min. 65%)</li>
+                  <li>Bebas dari kontaminan dan bahan kimia</li>
+                  <li>Cocok untuk ekstraksi minyak kelapa murni</li>
+                  <li>Umur simpan panjang hingga 12 bulan</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-contact">
+              <p>Informasi lebih lanjut hubungi: <strong>Darmawati (0822-3192-9897)</strong></p>
+              <!-- Mobile contact buttons -->
+              <div class="contact-buttons">
+                <a href="https://wa.me/6282291965438" class="contact-btn whatsapp-btn">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="tel:082291965438" class="contact-btn phone-btn">
+                  <i class="fas fa-phone"></i> Telepon
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gula Kelapa -->
+      <div class="product-category">
+        <div class="category-title">
+          <h2>Gula Kelapa</h2>
+        </div>
+        
+        <div class="highlight-box">
+          <h3 style="margin-top: 0; color: #0066cc;">Gula Kelapa Alami Khas Wumbuburo</h3>
+          <p>Gula kelapa kami diproduksi secara tradisional dengan memanfaatkan nira kelapa segar dari kebun anggota koperasi. Proses produksi yang alami tanpa bahan pengawet membuat gula kelapa kami memiliki cita rasa khas yang autentik dan nilai gizi yang terjaga.</p>
+        </div>
+        
+        <div class="product-process">
+          <div class="process-title">Proses Pembuatan Gula Kelapa:</div>
+          <ol>
+            <li>Penyadapan nira kelapa segar setiap pagi</li>
+            <li>Penyaringan dan pemasakan dengan suhu terkontrol</li>
+            <li>Pencetakan manual dengan peralatan higienis</li>
+            <li>Pengemasan yang menjaga kesegaran produk</li>
+          </ol>
+        </div>
+        
+       <div class="products-grid">
+
+        <!-- Gula Kelapa Standar -->
+        <div class="product-card">
+          <img src="assets/images/produk/gula-kelapa.jpg" alt="Gula Kelapa Standar" class="product-image">
+          <div class="product-info">
+            <h3 class="product-name">Gula Kelapa Standar</h3>
+            <p class="product-description">
+              Gula kelapa alami berbentuk cetakan bulat, dibuat dari nira kelapa segar dan daging kelapa setengah kering dengan tepung terigu. Manis alami tanpa bahan pengawet, cocok untuk konsumsi sehari-hari maupun olahan makanan.
+            </p>
+
+            <div class="product-specs">
+              <div class="spec-item">
+                <span class="spec-name">Berat:</span>
+                <span class="spec-value">500 gram/cetak</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-name">Kemasan:</span>
+                <span class="spec-value">Kulit jagung kering tipis</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-name">Rasa:</span>
+                <span class="spec-value">Manis alami</span>
+              </div>
+            </div>
+
+            <div class="product-features">
+              <h4>Keunggulan Produk:</h4>
+              <ul class="feature-list">
+                <li>Dibuat dari nira kelapa asli tanpa campuran</li>
+                <li>Rasa manis alami dengan aroma khas kelapa</li>
+                <li>Daging kelapa setengah kering memberikan tekstur padat</li>
+                <li>Kaya mineral alami (kalium, magnesium, zat besi)</li>
+                <li>Indeks glikemik lebih rendah daripada gula putih</li>
+                <li>Cocok untuk program makanan sehat dan alami</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-contact">
+            <p>Informasi lebih lanjut hubungi: <strong>Rusdianto (0823-4861-8670)</strong></p>
+            <!-- Mobile contact buttons -->
+            <div class="contact-buttons">
+              <a href="https://wa.me/6282348618670" class="contact-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="tel:082348618670" class="contact-btn phone-btn">
+                <i class="fas fa-phone"></i> Telepon
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gula Kelapa Premium / Bagus -->
+        <div class="product-card">
+          <img src="assets/images/produk/gula kelapa premimum.jpg" alt="Gula Kelapa Premium" class="product-image">
+          <div class="product-info">
+            <h3 class="product-name">Gula Kelapa Premium</h3>
+            <p class="product-description">
+              Gula kelapa premium berbentuk serbuk atau cetakan halus, dibuat dari nira kelapa segar dan daging kelapa muda, dipadukan dengan tepung beras ketan, tepung terigu, vanili alami, dan daun pandan. Rasa manis lebih kuat, aroma lebih harum, cocok untuk hidangan spesial dan kuliner.
+            </p>
+
+            <div class="product-specs">
+              <div class="spec-item">
+                <span class="spec-name">Berat:</span>
+                <span class="spec-value">250 gram/kemasan</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-name">Kemasan:</span>
+                <span class="spec-value">Kulit jagung tebal + plastik food-grade</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-name">Tekstur:</span>
+                <span class="spec-value">Halus & Kenyal</span>
+              </div>
+            </div>
+
+            <div class="product-features">
+              <h4>Keunggulan Produk:</h4>
+              <ul class="feature-list">
+                <li>Dibuat dari bahan alami dan daging kelapa muda</li>
+                <li>Rasa manis lebih kuat dengan aroma kelapa, vanili, dan pandan</li>
+                <li>Tekstur halus dan kenyal, mudah dipotong sesuai cetakan</li>
+                <li>Praktis untuk campuran minuman, kue, dan hidangan spesial</li>
+                <li>Tanpa bahan pengawet, higienis, umur simpan lebih panjang</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-contact">
+            <p>Informasi lebih lanjut hubungi: <strong>Itno Haris (0813-5425-7172)</strong></p>
+            <!-- Mobile contact buttons -->
+            <div class="contact-buttons">
+              <a href="https://wa.me/6281354257172" class="contact-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="tel:081354257172" class="contact-btn phone-btn">
+                <i class="fas fa-phone"></i> Telepon
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <!-- Informasi Produk Lainnya yang Direncanakan -->
+    <div class="info-notice">
+      <h3 style="color: #d35400; margin-top: 0;">Rencana Pengembangan Usaha</h3>
+      <p>Sebagai bagian dari visi pengembangan jangka panjang, Koperasi Desa Merah Putih Wumbuburo berencana untuk mengembangkan usaha lainnya seperti:</p>
+      <ul>
+        <li>Pengolahan Air Minum Dalam Kemasan</li>
+        <li>Perdagangan Beras</li>
+        <li>Dan berbagai usaha produktif lainnya</li>
+      </ul>
+      <p>Pengembangan usaha ini akan disesuaikan dengan kemampuan koperasi dan melalui persetujuan Rapat Anggota Tahunan.</p>
+    </div>
+
+    <!-- Manfaat Bergabung -->
+    <div class="benefits-section">
+      <h2 style="text-align: center; margin-bottom: 30px; color: #c00;">Keuntungan Membeli Produk Koperasi Kami</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Kualitas Terjamin</h3>
+          <p>Produk dengan kualitas terbaik melalui proses seleksi ketat dan standar mutu tinggi</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Alami dan Organik</h3>
+          <p>Diproses secara alami tanpa bahan kimia tambahan dan pengawet</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Memberdayakan Masyarakat</h3>
+          <p>Setiap pembelian mendukung ekonomi lokal dan kesejahteraan petani</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Legalitas Jelas</h3>
+          <p>Produk dengan izin resmi dan standar keamanan pangan yang terjamin</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Pengiriman Tepat Waktu</h3>
+          <p>Layanan pengiriman cepat dan tepat waktu untuk memastikan kesegaran produk</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>Dukung Ekonomi Lokal</h3>
+          <p>Membantu menggerakkan perekonomian desa dan kesejahteraan anggota koperasi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Contact Section -->
+    <div class="enhanced-contact">
+      <h3>Hubungi Kami untuk Pemesanan</h3>
+      <p>Silakan hubungi kontak di bawah ini untuk informasi lebih lanjut mengenai produk, kualitas, dan cara pemesanan.</p>
+      
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <strong>Alamat</strong>
+          <span>Desa Wumbuburo, Kabaena Timur</span>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <strong>Email</strong>
+          <span>mpwumbuburokopdes@gmail.com</span>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <strong>Telepon</strong>
+          <span>Lihat kontak di setiap produk</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="assets/images/logo/logokopdes.png" alt="Logo Koperasi" style="height: 100px; margin-bottom: 10px;" />
+          <p>Bersama Membangun Ekonomi Desa melalui semangat gotong royong dan kekeluargaan.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Menu Utama</h3>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="pengurus.html">Pengurus</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="keanggotaan.html">Keanggotaan</a></li>
+            <li><a href="berita.html">Berita</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Produk Kami</h3>
+          <ul>
+            <li><a href="produk.html">Kopra Putih</a></li>
+            <li><a href="produk.html">Gula Kelapa</a></li>
+            <li><a href="produk.html">Pengolahan Air Minum</a></li>
+            <li><a href="produk.html">Perdagangan Beras</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Kontak Kami</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Desa Wumbuburo, Kabaena Timur</li>
+            <li><i class="fas fa-phone" aria-hidden="true"></i> Irfan (0822-9196-5438)</li>
+            <li><i class="fas fa-phone" aria-hidden="true"></i> Itno Haris (0813-5425-7172)</li>
+            <li><i class="fas fa-phone" aria-hidden="true"></i> Zulman (0822-5948-9552)</li>
+            <li><i class="fas fa-phone" aria-hidden="true"></i> Darmawati (082-3192-9897)</li>
+            <li><i class="fas fa-phone" aria-hidden="true"></i> Rusdianto (0823-4861-8670)</li>
+            <li><i class="fas fa-envelope" aria-hidden="true"></i> mpwumbuburokopdes@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2025 Koperasi Desa Merah Putih Wumbuburo | Dikembangkan oleh Irfan Wumbuburo
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
